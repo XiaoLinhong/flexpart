@@ -369,5 +369,31 @@ xiaolh@Lnode5:~/software/Packages$ tree /disk2/xiaolh/software/eccodes/lib/ -L 1
 └── python2.7
 ```
 
+## ncl
+### 下载
+``` bash
+https://www.earthsystemgrid.org/dataset/ncl.650.html
+wget https://www.earthsystemgrid.org/dataset/ncl.650.nodap/file/ncl_ncarg-6.5.0-Debian8.11_64bit_nodap_gnu492.tar.gz
+```
+
+### 安装
+``` bash
+mkdir -p /disk2/xiaolh/software/ncl
+mv ncl_ncarg-6.5.0-Debian8.11_64bit_nodap_gnu492.tar.gz /disk2/xiaolh/software/ncl
+tar -zxvf ncarg-6.5.0-Debian8.11_64bit_nodap_gnu492.tar.gz
+```
+
+### 配置环境变量
+``` bash
+vim ~/.bashrc
+
+#NCL
+export NCARG_ROOT=/disk2/xiaolh/software/ncl
+export PATH=$NCARG_ROOT/bin:$PATH
+export LD_LIBRARY_PATH=$NCARG_ROOT/lib:$LD_LIBRARY_PATH
+```
+
+
+
 
 
