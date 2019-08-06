@@ -263,3 +263,111 @@ export NETCDFF=/disk2/xiaolh/software/netcdff
 export LD_LIBRARY_PATH=$NETCDFF/lib:$LD_LIBRARY_PATH
 ```
 
+## cmake
+
+### 下载
+``` bash
+https://cmake.org/download/
+wget https://github.com/Kitware/CMake/releases/download/v3.15.1/cmake-3.15.1.tar.gz
+```
+### 安装
+``` bash
+mkdir -p /disk2/xiaolh/software/cmake
+tar -zxvf cmake-3.15.1.tar.gz
+cd cmake-3.15.1
+./configure --prefix=/disk2/xiaolh/software/cmake
+make install
+```
+### 检查
+
+``` bash
+xiaolh@Lnode5:~/software/cmake$ tree /disk2/xiaolh/software/cmake/bin/
+/disk2/xiaolh/software/cmake/bin/
+├── ccmake
+├── cmake
+├── cpack
+└── ctest
+```
+
+### 配置环境变量
+``` bash
+vim ~/.bashrc
+
+# CMAKE
+export CMAKE=/disk2/xiaolh/software/cmake
+export PATH=$CMAKE/bin:$PATH
+export LD_LIBRARY_PATH=$CMAKE/lib:$LD_LIBRARY_PATH
+```
+
+## jasper
+
+### 下载
+``` bash
+https://www.ece.uvic.ca/~frodo/jasper/
+wget https://www.ece.uvic.ca/~frodo/jasper/software/jasper-2.0.14.tar.gz
+```
+### 安装
+``` bash
+mkdir -p /disk2/xiaolh/software/jasper
+tar -zxvf jasper-2.0.14.tar.gz
+cd jasper-2.0.14
+mkdir tmp ; cd tmp
+cmake -G "Unix Makefiles" -H/disk2/xiaolh/software/Packages/jasper-2.0.14 \
+-B/disk2/xiaolh/software/Packages/jasper-2.0.14/tmp -DCMAKE_INSTALL_PREFIX=/disk2/xiaolh/software/jasper
+make install
+```
+
+### 检查
+
+``` bash
+xiaolh@Lnode5:~/software/Packages$ tree /disk2/xiaolh/software/jasper/lib
+/disk2/xiaolh/software/jasper/lib
+├── libjasper.so -> libjasper.so.4
+├── libjasper.so.4 -> libjasper.so.4.0.0
+├── libjasper.so.4.0.0
+└── pkgconfig
+    └── jasper.pc
+```
+
+### 配置环境变量
+``` bash
+vim ~/.bashrc
+
+# jasper
+export JASPER=/disk2/xiaolh/software/jasper
+export LD_LIBRARY_PATH=$JASPER/lib:$LD_LIBRARY_PATH
+```
+
+## eccodes
+
+### 下载
+``` bash
+https://confluence.ecmwf.int/display/ECC/Releases
+wget https://confluence.ecmwf.int/download/attachments/45757961/eccodes-2.13.0-Source.tar.gz?api=v2 -O eccodes-2.13.0-Source.tar.gz
+```
+
+### 安装
+``` bash
+mkdir -p /disk2/xiaolh/software/eccodes
+tar -zxvf eccodes-2.13.0-Source.tar.gz
+cd eccodes-2.13.0-Source
+mkdir build ; cd build
+cmake -DCMAKE_INSTALL_PREFIX=/disk2/xiaolh/software/eccodes ../
+
+make install
+```
+
+### 检查
+
+``` bash
+xiaolh@Lnode5:~/software/Packages$ tree /disk2/xiaolh/software/eccodes/lib/ -L 1
+/disk2/xiaolh/software/eccodes/lib/
+├── cmake
+├── libeccodes_f90.so
+├── libeccodes.so
+├── pkgconfig
+└── python2.7
+```
+
+
+
