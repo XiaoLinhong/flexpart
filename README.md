@@ -203,7 +203,7 @@ export PATH=$NETCDF/bin:$PATH
 export LD_LIBRARY_PATH=$NETCDF/lib:$LD_LIBRARY_PATH
 ```
 
-## netcdf-c v4.7.0
+## netcdf-fortran v4.4.5
 ### 下载
 ``` bash
 https://www.unidata.ucar.edu/downloads/netcdf/index.jsp
