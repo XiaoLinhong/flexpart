@@ -4,7 +4,7 @@
 ``` bash
 https://www.flexpart.eu/
 wget https://www.flexpart.eu/downloads/58 -O flexpart_wrf_3.3.2.tar.gz
-wget https://www.flexpart.eu/downloads/63 -O flexpart_v10.3beta.tar.gz
+https://git.nilu.no/flexpart/flexpart/commits/dev
 ```
 ### 解压
 tar -zxvf flexpart_v10.3beta.tar.g
