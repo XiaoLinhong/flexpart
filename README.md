@@ -156,7 +156,7 @@ mkdir -p /disk2/xiaolh/software/netcdf/netcdfc
 tar -zxvf netcdf-c-4.7.0.tar.gz
 cd netcdf-c-4.7.0
 CPPFLAGS="-I/disk2/xiaolh/software/hdf5/include -I/disk2/xiaolh/software/zlib/include"\
-LDFLAGS="-L/disk2/xiaolh/software/hdf5/lib  -L/disk2/xiaolh/software/zlib -L/disk2/xiaolh/software/szip/lib" \
+LDFLAGS="-L/disk2/xiaolh/software/hdf5/lib  -L/disk2/xiaolh/software/zlib/lib -L/disk2/xiaolh/software/szip/lib" \
 ./configure --prefix=/disk2/xiaolh/software/netcdf/netcdfc --disable-dap
 
 make install
