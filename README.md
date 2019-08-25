@@ -198,7 +198,7 @@ xiaolh@Lnode5:~/software/Packages$ tree /disk2/xiaolh/software/netcdf/netcdfc
 vim ~/.bashrc
 
 # NETCDF 
-export NETCDF=/disk2/xiaolh/software/netcdfc
+export NETCDF=/disk2/xiaolh/software/netcdf/netcdfc
 export PATH=$NETCDF/bin:$PATH
 export LD_LIBRARY_PATH=$NETCDF/lib:$LD_LIBRARY_PATH
 ```
